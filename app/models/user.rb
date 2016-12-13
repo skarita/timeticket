@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
 
-  has_many :snippets, dependent: :destroy
-  has_many :attempts, dependent: :destroy
+  has_many :reservations, dependent: :destroy
+  has_many :listings, dependent: :destroy
 
   # Validation constraints
   validates :name, :email, :username, presence: true
@@ -16,7 +16,7 @@ class User < ApplicationRecord
       message: "no special characters or spacing"
     },
     exclusion: {
-      :in => %w(login signup settings add api snippets search browse archive),
+      :in => %w(login signup settings add api listing search browse archive),
       message: "has already been taken"
     }
   validates :email,

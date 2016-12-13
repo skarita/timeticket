@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 20161212055137) do
   enable_extension "plpgsql"
 
   create_table "listings", force: :cascade do |t|
-    t.string   "title"
+    t.string   "name"
     t.text     "description"
     t.integer  "user_id"
-    t.text     "body"
+    t.text     "image"
     t.string   "location"
     t.integer  "price"
     t.integer  "length"
@@ -28,13 +28,18 @@ ActiveRecord::Schema.define(version: 20161212055137) do
   end
 
   create_table "reservations", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "listing_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
+    t.string   "name"
     t.string   "email"
+    t.string   "username"
     t.text     "password_digest"
+    t.text     "avatar"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

@@ -4,11 +4,17 @@
     <title>Timeticket</title>
     <%= csrf_meta_tags %>
 
+    <!-- Icon -->
+    <link rel="icon" href="/tt.png" type="image/x-icon">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <!-- Flash messages -->
+    <%= render 'layouts/messages' %>
     <%= yield %>
+
   </body>
 </html>

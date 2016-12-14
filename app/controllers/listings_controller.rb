@@ -1,5 +1,9 @@
 class ListingsController < ApplicationController
 
+  def index
+    @listings = Listing.all
+  end
+
   def show
     @listing = Listing.find(params[:id])
   end
@@ -18,6 +22,7 @@ class ListingsController < ApplicationController
     @listing.location = params[:location]
     @listing.price = params[:price]
     @listing.length = params[:length]
+    @listing.category = params[:category]
 
     @errors = {}
     if @listing.save
@@ -88,4 +93,23 @@ class ListingsController < ApplicationController
     @reservations = Reservation.all
   end
 
+  def categories
+    @listings = Listing.all
+    @reservations = Reservation.all
+  end
+
+  def education
+    @listings = Listing.where(category: 'education')
+    @listings_pop = Listing.joins(:reservations).where(category: 'education').group(:id).order("count(*) desc")
+  end
+
+  def recreation
+    @listings = Listing.where(category: 'recreation')
+    @listings_pop = Listing.joins(:reservations).where(category: 'recreation').group(:id).order("count(*) desc")
+  end
+
+  def miscellaneous
+    @listings = Listing.where(category: 'miscellaneous')
+    @listings_pop = Listing.joins(:reservations).where(category: 'miscellaneous').group(:id).order("count(*) desc")
+  end
 end

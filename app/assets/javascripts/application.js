@@ -12,5 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+
+jQuery(document).ready(function($) {
+  $(".clickable-row").click(function() {
+    window.document.location = $(this).data("href");
+  });
+  $(".clickable-row").css( 'cursor', 'pointer' );
+
+});
+
+$(document).ready(function(){
+  setTimeout(function(){
+    $('#flash').remove();
+  }, 2345);
+})

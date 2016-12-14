@@ -1,0 +1,26 @@
+<div class="header">
+
+  <% @listings.each do |listing| %>
+    <div class="ui-card">
+      <header class="content">
+        <span class="right"><%= listing.location %></span>
+      </header>
+
+      <div class="image">
+        <img src="<%= listing.image %>" alt="" />
+        <span class="star">&#9733;</span>
+      </div>
+
+      <div class="ui-content">
+        <h3><%= listing.name %></h3>
+        <span><%= truncate(listing.description, length: 100) { link_to "(See more)", "#" } %></span>
+      </div>
+
+    </div>
+
+  <% end %>
+</div>
+<div class="space"></div>
+<div class="content">
+
+</div>

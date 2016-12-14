@@ -11,5 +11,9 @@ Rails.application.routes.draw do
   delete '/session', to: 'session#destroy'
 
   get '/', to: 'users#home'
-
+  # get '/snippet/index', to: 'listings#index'
+  get '/categories', to: 'listings#categories'
+  get '/categories/education', to: 'listings#education'
+  get '/categories/recreation', to: 'listings#recreation'
+  get '/categories/miscellaneous', to: 'listings#miscellaneous'
 end

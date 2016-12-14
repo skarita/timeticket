@@ -1,0 +1,69 @@
+
+
+<!-- link_to "edit listing 1" , "/listings/#{@listing.id}/edit" , id:'1'
+-->
+
+
+<!-- _________________________ Ruby ________________________ -->
+<h2><a href="/categories/education">Education</a></h2>
+<h2><a href="/categories/recreation">Recreation</a></h2>
+<h2><a href="/categories/miscellaneous">Miscellaneous</a></h2>
+
+<h2>All Listings</h2>
+<% @listings.each do |listing| %>
+  <div class="ui-card">
+    <header class="content">
+      <span class="right"><%= listing.location %></span>
+    </header>
+
+    <div class="image">
+      <img src="<%= listing.image %>" alt="">
+      <span class="star">&#9733;</span>
+    </div>
+
+    <div class="ui-content">
+      <h3><%= listing.name %></h3>
+      <span><%= truncate(listing.description, length: 100) { link_to "(See more)", "#" } %></span>
+    </div>
+
+  </div>
+
+<% end %>
+
+<style>
+  .section-ed {
+    display: block;
+    width: 100%;
+    background-color: #3e9a82;
+  }
+
+  .section-re {
+    display: block;
+    width: 100%;
+    height: 300px;
+    background-color: #f0c79c;
+  }
+
+  .list {
+    width: 25%;
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
+  }
+
+  .list h3{
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .score-board {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+  }
+
+  .score-board h3{
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+</style>

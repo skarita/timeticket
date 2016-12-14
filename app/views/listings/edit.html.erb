@@ -1,0 +1,50 @@
+<div class="listing-new-wrapper">
+  <div class="back-btn">
+    <a href="/users/<%= current_user.id %>"><button class="btn-back">Back To Your Profile</button></a>
+  </div>
+
+  <div class="listing-new-form">
+    <%= form_tag listing_path , method: 'patch' do %>
+
+      <div class="listing-name form-group">
+        <input id="name" class="" name="name" type="text" value="<%= @listing.name %>" placeholder="Listing Name" >
+        <p class="danger"><%= @errors[:name] %></p>
+      </div>
+
+      <div class="listing-description form-group">
+        <textarea id="description" class="" type="text" name="description" placeholder="Description" rows="1" cols="60"><%= @listing.description %></textarea>
+        <p class="danger"><%= @errors[:description] %></p>
+      </div>
+
+      <div class="listing-category">
+        <span class="fancyArrow"></span>
+        <select id="category" class="" name="category" value="<%= @listing.category %>">
+          <option value="education">Education</option>
+          <option value="recreation">Recreation</option>
+          <option value="miscellaneous">Miscellaneous</option>
+        </select>
+        <p class="danger"><%= @errors[:category] %></p>
+      </div>
+
+      <div class="listing-image form-group">
+        <textarea id="listing-image" class="" type="text" name="image" rows="8" cols="60" placeholder="Listing Code"><%= @listing.image %></textarea>
+        <p class="danger"><%= @errors[:image] %></p>
+      </div>
+
+      <div class="btns">
+        <div class="listing-btn">
+          <button class="btn-listing">Update</button>
+        </div>
+
+    <% end %>
+
+      <div class="listing-delete-btn">
+        <%= form_tag listing_path , method: 'delete' do %>
+
+          <button class="btn-listing">Delete</button>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>

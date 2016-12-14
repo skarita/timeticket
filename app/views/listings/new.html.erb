@@ -1,0 +1,39 @@
+<div class="listing-new-wrapper">
+  <div class="back-btn">
+    <a href="/users/<%= current_user.id %>"><button class="btn-back">Back To Your Profile</button></a>
+  </div>
+
+  <div class="listing-new-form">
+    <%= form_tag '/listings' , method: 'post' do %>
+
+      <div class="listing-name form-group">
+        <input id="name" class="" name="name" type="text" placeholder="Listing Name" value="<%= @listing.name %>" >
+        <p class="danger"><%= @errors[:name] %></p>
+      </div>
+
+      <div class="listing-description form-group">
+        <textarea id="description" class="" type="text" name="description" placeholder="Description" rows="1" cols="60"><%= @listing.description %></textarea>
+        <p class="danger"><%= @errors[:description] %></p>
+      </div>
+
+      <div class="listing-category">
+        <span class="fancyArrow"></span>
+        <select id="category-new" class="" name="category"  >
+          <option value="education" <% if @listing.category == 'education' %> selected <% end %> >Education</option>
+          <option value="recreation" <% if @listing.category == 'recreation' %> selected <% end %>>Recreation</option>
+          <option value="miscellaneous" <% if @listing.category == 'miscellaneous' %> selected <% end %>>Miscellaneous</option>
+        </select>
+        <p class="danger"><%= @errors[:category] %></p>
+      </div>
+
+      <div class="listing-image form-group">
+        <textarea id="listing-image" type="text" name="image" rows="8" cols="60" placeholder="Listing Code"> <%= @listing.image %></textarea>
+        <p class="danger"><%= @errors[:image] %></p>
+      </div>
+
+      <div class="listing-btn">
+        <button class="btn-listing">Submit</button>
+      </div>
+    <% end %>
+  </div>
+</div>

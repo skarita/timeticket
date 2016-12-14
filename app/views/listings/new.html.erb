@@ -26,6 +26,21 @@
         <p class="danger"><%= @errors[:category] %></p>
       </div>
 
+      <div class="listing-location form-group">
+        <input id="location" class="" name="location" type="text" placeholder="Location" value="<%= @listing.location %>" >
+        <p class="danger"><%= @errors[:location] %></p>
+      </div>
+
+      <div class="listing-price form-group">
+        <input id="price" class="" name="price" type="text" placeholder="Price" value="<%= @listing.price %>" >
+        <p class="danger"><%= @errors[:price] %></p>
+      </div>
+
+      <div class="listing-length form-group">
+        <input id="length" class="" name="length" type="text" placeholder="Duration in minutes" value="<%= @listing.length %>" >
+        <p class="danger"><%= @errors[:length] %></p>
+      </div>
+
       <div class="listing-image form-group">
         <textarea id="listing-image" type="text" name="image" rows="8" cols="60" placeholder="Listing Code"> <%= @listing.image %></textarea>
         <p class="danger"><%= @errors[:image] %></p>

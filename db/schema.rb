@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20161212055137) do
     t.integer  "user_id"
     t.text     "image"
     t.string   "location"
+    t.string   "category"
     t.integer  "price"
     t.integer  "length"
     t.datetime "created_at",  null: false

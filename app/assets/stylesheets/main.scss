@@ -3,13 +3,25 @@ $font-stack: 'Nunito', sans-serif;
 
 
 body {
+  width: 100%;
   padding-top: 4em;
+  margin: 0 auto;
+}
+
+a.navbar-brand {
+  padding: .4em;
+}
+
+nav button.btn {
+  border: none;
+  width: 100%;
+  text-align: left;
 }
 
 #logo {
   margin: 0;
   font-family: $header-font;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .container {
@@ -19,4 +31,33 @@ body {
 .bg-wrapper {
   font-family: $font-stack;
   margin-top: -1em;
+  position: relative;
+  z-index:-1;
+}
+
+.home-top-center {
+  font-family: $font-stack;
+  margin-top: -40em;
+  color: white;
+  top: 0;
+  padding: 10em;
+  h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+// .ui .search {
+//   margin-top: -6em;
+//
+// }
+
+.col-lg-6 {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: -20px;
+}
+
+.content-wrapper {
+  margin-top: 17em;
 }

@@ -1,36 +1,52 @@
+<div class="wrapper">
+<div class="container">
 <div class="header">
+
   <h1><%= @listing.name %></h1>
 
 </div>
 <div class="space"></div>
 <div class="content">
+  <button class="new-listing btn btn-default btn-back-listings">
+    <a href="">
+      <h3>Buy Now</h3>
+    </a>
+  </button>
 
 <div class="purchase">
-  <h5 href="">Purchase <%= @listing.name %> TimeTicket</h5>
+  <h3 href="">Order:  <%= @listing.name %> TimeTicket</h5>
 </div>
 
 
 </div>
-<div class="ui card">
-  <div class="content">
-    <div class="right floated meta"><%= @listing.name %> </div>
-    <img class="ui avatar image" src="http://semantic-ui.com/images/avatar/large/elliot.jpg"> Elliot
-  </div>
-  <div class="image">
-    <img src="<%= @listing.image %>">
-  </div>
-  <div class="content">
-    <span class="right floated">
-      <i class="heart outline like icon"></i>
-      17 likes
-    </span>
-    <i class="comment icon"></i>
-    3 comments
-  </div>
-  <div class="extra content">
-    <div class="ui large transparent left icon input">
-      <i class="heart outline icon"></i>
-      <input type="text" placeholder="Add Comment...">
+
+<div class="ui-wrapper">
+  <div class="ui card ui-cards">
+    <div class="content">
+      <div class="right floated meta"><i class="compass icon"></i><%= @listing.location %> </div>
+      <img class="ui avatar image" src="<%= User.find(@listing.user_id).avatar %>"><%= User.find(@listing.user_id).name %>
+    </div>
+    <div class='clickable-row image' data-href='/listings/<%= @listing.id %>'>
+      <img src="<%= @listing.image %>">
+    </div>
+    <div class='clickable-row content' data-href='/listings/<%= @listing.id %>'>
+      <span class="right floated">
+        <i class="star icon"></i>
+        <%= @listing.description %>
+        <p><i class="hourglass start icon"></i><%= @listing.length %> minutes</p>
+      </span>
+      <i class="ticket icon"></i>
+      <%= @listing.name %>
+      <p><i class="money icon"></i>$<%= @listing.price %></p>
+    </div>
+    <div class="extra content">
+      <div class="ui large transparent left icon input">
+        <i class="heart outline icon"></i>
+        <input type="text" placeholder="Add Comment...">
+      </div>
     </div>
   </div>
+</div>
+
+</div>
 </div>

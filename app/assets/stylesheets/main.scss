@@ -11,6 +11,12 @@ body {
 .wrapper {
   width: 94%;
   margin: 0 auto;
+  text-align: center;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
 }
 
 .wrapper2 {
@@ -123,6 +129,24 @@ nav button.btn {
   border: 2px solid #2aabd2;
 }
 
+.content button {
+  display: block;
+  margin: 1em auto;
+  border: $primary-color;
+  border-radius: 2px;
+  color: #fff;
+  background-color: $secondary-color;
+  padding: 18px;
+  width: 200px;
+  font-size: 1.4em;
+  font-family: $font-stack;
+}
+
+.content button:hover {
+  background-color: #31b0d5;
+  color: #fff;
+  border: 2px solid #2aabd2;
+}
 
 .home-top-bottom {
   display: inline-block;
@@ -212,6 +236,8 @@ nav button.btn {
     font-size: 1.4em;
     font-family: $font-stack;
     text-align: center;
+    margin-left: 2em;
+    float: left;
   }
   button:hover {
     background-color: #31b0d5;
@@ -220,7 +246,9 @@ nav button.btn {
   }
 }
 
-
+.purchase h3 {
+  font-size: 1.2em;
+}
 
 footer {
   text-align: center;

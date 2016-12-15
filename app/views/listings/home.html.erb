@@ -35,10 +35,10 @@
             <div class="right floated meta"><i class="compass icon"></i><%= listing.location %> </div>
             <img class="ui avatar image" src="<%= User.find(listing.user_id).avatar %>"><%= User.find(listing.user_id).name %>
           </div>
-          <div class="image">
+          <div class='clickable-row image' data-href='/listings/<%= listing.id %>'>
             <img src="<%= listing.image %>">
           </div>
-          <div class="content">
+          <div class='clickable-row content' data-href='/listings/<%= listing.id %>'>
             <span class="right floated">
               <i class="star icon"></i>
               <%= listing.description %>

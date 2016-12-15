@@ -5,9 +5,17 @@
 
 
 <!-- _________________________ Ruby ________________________ -->
-<h2><a href="/categories/education">Education</a></h2>
-<h2><a href="/categories/recreation">Recreation</a></h2>
-<h2><a href="/categories/miscellaneous">Miscellaneous</a></h2>
+<div class="listings-category-wrapper">
+  <div class="categories-wrapper">
+        <button class="new-listing btn btn-default btn-back-listings">
+          <a href="/listings/new">
+            <h3>+ Create new listing</h3>
+          </a>
+        </button>
+
+<h2><a href="/categories/education"><i class="book icon"></i>Education</a></h2>
+<h2><a href="/categories/recreation"><i class="music icon"></i>Recreation</a></h2>
+<h2><a href="/categories/miscellaneous"><i class="map icon"></i>Miscellaneous</a></h2>
 
 <h2>All Listings</h2>
 <% @listings.each do |listing| %>
@@ -41,6 +49,8 @@
 
 <% end %>
 
+</div>
+</div>
 <style>
   .section-ed {
     display: block;

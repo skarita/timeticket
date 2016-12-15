@@ -6,7 +6,15 @@ $secondary-color: #5bc0de;
 body {
   width: 100%;
   padding-top: 4em;
+}
+
+.wrapper {
+  width: 94%;
   margin: 0 auto;
+}
+
+.wrapper2 {
+  margin: 2em auto;
 }
 
 a.navbar-brand {
@@ -41,7 +49,7 @@ nav button.btn {
   margin-top: -40em;
   color: white;
   top: 0;
-  padding: 10em;
+  padding: 8em;
   h2 {
     font-size: 40px;
     text-align: center;
@@ -56,11 +64,10 @@ nav button.btn {
 .col-lg-6 {
   width: 70%;
   margin: 0 auto;
-  margin-top: -20px;
 }
 
 .content-wrapper {
-  margin-top: 17em;
+  margin-top: 12em;
 }
 
 .form-wrapper {
@@ -113,7 +120,22 @@ nav button.btn {
 .user-forms button:hover {
   background-color: #31b0d5;
   color: #fff;
-  border: 2px solid #2aabd2;;
+  border: 2px solid #2aabd2;
+}
+
+
+.home-top-bottom {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn-join {
+  display: inline-block;
+}
+
+.btn-login {
+  display: inline-block;
 }
 
 .dropdown-menu {
@@ -146,5 +168,89 @@ nav button.btn {
   background-color: rgba(246, 153, 153, 0.6);
 }
 .alert-success{
-  background-color: rgba(149, 255, 160, 0.6);
+  background-color:  rgba(227,242,253, 0.8);
+}
+
+.cards-wrapper h2 {
+  text-align: center;
+  font-size: 2em;
+  padding: 1em;
+}
+
+.home-middle-right h2,{
+  text-align: center;
+  font-size: 1.4em;
+  padding: 0.4em;
+}
+
+.home-middle-right p {
+  text-align: center;
+}
+
+.listings-category-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  h2 {
+    font-family: $font-stack;
+    font-size: 2em;
+    padding: 0.4em;
+  }
+}
+.categories-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  padding: 2em;
+  button {
+    display: block;
+    margin: 1em auto;
+    border: $primary-color;
+    border-radius: 2px;
+    color: #fff;
+    background-color: $secondary-color;
+    padding: 18px;
+    width: 200px;
+    font-size: 1.4em;
+    font-family: $font-stack;
+    text-align: center;
+  }
+  button:hover {
+    background-color: #31b0d5;
+    color: #fff;
+    border: 2px solid #2aabd2;
+  }
+}
+
+
+
+footer {
+  text-align: center;
+  background-color: #e3f2fd;
+  margin-bottom: 0;
+  bottom:0;
+  padding-bottom: 0;
+}
+
+footer h2 {
+  font-size: 1.4em;
+  padding-top: 1em;
+}
+
+footer button {
+  display: block;
+  margin: 1em auto;
+  border: $primary-color;
+  border-radius: 2px;
+  color: #fff;
+  background-color: $secondary-color;
+  padding: 18px;
+  width: 200px;
+  font-size: 1.4em;
+  font-family: $font-stack;
+  text-align: center;
+}
+
+footer button:hover {
+  background-color: #31b0d5;
+  color: #fff;
+  border: 2px solid #2aabd2;
 }

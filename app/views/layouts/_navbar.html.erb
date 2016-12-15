@@ -7,18 +7,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/categories">
+      <a class="navbar-brand" href="/">
         <h1 id="logo">TimeTicket</h1>
       </a>
     </div>
-  
+
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <% if logged_in? %>
         <!-- Logged in navigation options -->
         <div class="navbar-right">
           <ul class="nav navbar-nav">
             <li>
-                <a href="/users/<%= current_user.id %>">My Profile</a>
+                <a href="/categories">Categories</a>
             </li>
             <li>
                 <a href="/listings">MarketPlace</a>

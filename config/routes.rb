@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post '/session', to: 'session#create'
   delete '/session', to: 'session#destroy'
 
-  get '/', to: 'users#home'
+  get '/', to: 'listings#home'
   # get '/snippet/index', to: 'listings#index'
   get '/categories', to: 'listings#categories'
   get '/categories/education', to: 'listings#education'

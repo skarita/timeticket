@@ -1,3 +1,22 @@
+$header-font: 'Share tech mono', sans-serif;
+$font-stack: 'Nunito', sans-serif;
+
+
 body {
   padding-top: 4em;
+}
+
+#logo {
+  margin: 0;
+  font-family: $header-font;
+  font-size: 1.2em;
+}
+
+.container {
+  font-family: $font-stack;
+}
+
+.bg-wrapper {
+  font-family: $font-stack;
+  margin-top: -1em;
 }

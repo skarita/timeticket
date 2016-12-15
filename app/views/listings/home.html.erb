@@ -1,0 +1,73 @@
+
+<div class="wrapper">
+  <div class="bg-wrapper">
+    <img class="ui fluid image" src="http://www.rayawallpaper.com/wp-content/uploads/2016/04/photography-wallpaper-wide-picture-background.jpg" width=100%>
+  <section class="home-top">
+
+    <div class="home-top-center">
+      <h2>Expert Freelancers</h2>
+      <h2>Share your knowledge</h2>
+
+    </div>
+
+    <div class="home-top-bottom">
+      <a href="/users/new">Sign Up</a>
+      <a href="/session/new">Log In</a>
+    </div>
+  </section>
+  </div>
+
+  <section class="home-middle">
+
+    <div class="home-middle-right">
+      <h2>Buy Time Tickets</h2>
+      <p>Sign up to purchase time tickets to attend classes taught by experts in your field of interest.</p>
+
+      <h2>Create Time Tickets</h2>
+      <p>Get paid to share your knowledge in your field of expertise.</p>
+
+      <h2>Real life interactive lessons</h2>
+      <p>Search what lessons are available in your city and choose between private or class lessons.</p>
+    </div>
+
+    <div class="cards-wrapper">
+      <h2>Trending</h2>
+      <% @listings.each do |listing| %>
+      <div class="ui-wrapper">
+        <div class="ui card ui-cards">
+          <div class="content">
+            <div class="right floated meta"><i class="compass icon"></i><%= listing.location %> </div>
+            <img class="ui avatar image" src="<%= User.find(listing.user_id).avatar %>"><%= User.find(listing.user_id).name %>
+          </div>
+          <div class="image">
+            <img src="<%= listing.image %>">
+          </div>
+          <div class="content">
+            <span class="right floated">
+              <i class="star icon"></i>
+              <%= listing.description %>
+              <p><i class="hourglass start icon"></i><%= listing.length %> minutes</p>
+            </span>
+            <i class="ticket icon"></i>
+            <%= listing.name %>
+            <p><i class="money icon"></i>$<%= listing.price %></p>
+          </div>
+          <div class="extra content">
+            <div class="ui large transparent left icon input">
+              <i class="heart outline icon"></i>
+              <input type="text" placeholder="Add Comment...">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <% end %>
+    </div>
+  </section>
+
+  <footer>
+    <h2>Share the knowledge and join us</h2>
+    <a href="users/new">Sign Up</a>
+  </footer>
+
+</div>

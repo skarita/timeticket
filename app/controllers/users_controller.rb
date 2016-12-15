@@ -23,13 +23,14 @@ class UsersController < ApplicationController
     @user.username = params[:username]
     @user.password = params[:password]
     @user.password_confirmation = params[:password_confirmation]
+    @user.avatar = params[:avatar]
 
     @errors = {}
     if @user.save
       session[:user_id] = @user.id
       flash[:success] = "Signed up successfully"
 
-      redirect_to '/languages'
+      redirect_to '/listings'
     else
 
       @user.errors.messages.each do |key, value|
@@ -60,6 +61,7 @@ class UsersController < ApplicationController
     @user.email = params[:email]
     @user.name = params[:name]
     @user.username = params[:username]
+    @user.avatar = params[:avatar]
     if params[:password] != ''
       @user.password_confirmation = params[:password_confirmation]
       @user.password = params[:password]

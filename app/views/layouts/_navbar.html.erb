@@ -1,4 +1,4 @@
-<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top navbar-dark bg-inverse" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -11,6 +11,7 @@
         <h1 id="logo">TimeTicket</h1>
       </a>
     </div>
+  
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <% if logged_in? %>
         <!-- Logged in navigation options -->
@@ -61,6 +62,7 @@
               </ul>
             </li>
           </ul>
+
         </div>
       <% end %>
     </div>

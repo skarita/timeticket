@@ -19,7 +19,7 @@
       <p class="danger"><%= @errors[:password] %></p>
       <input type="password" name="password_confirmation" placeholder="Password confirmation">
       <p class="danger"><%= @errors[:password_confirmation] %></p>
-      <input type="text" name="image" placeholder="Avatar image URL" value="">
+      <input type="text" name="avatar" placeholder="Avatar image URL" value="<%= @user.avatar %>">
 
       <button>Sign Up</button>
     <% end %>

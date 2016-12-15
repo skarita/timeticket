@@ -1,22 +1,33 @@
 <div class="header">
 
   <% @listings.each do |listing| %>
-    <div class="ui-card">
-      <header class="content">
-        <span class="right"><%= listing.location %></span>
-      </header>
-
-      <div class="image">
-        <img src="<%= listing.image %>" class='clickable-row' alt="" data-href='/listings/<%= listing.id %>'>
-        <span class="star">&#9733;</span>
+  <div class="ui-wrapper">
+    <div class="ui card ui-cards">
+      <div class="content">
+        <div class="right floated meta"><i class="compass icon"></i><%= listing.location %> </div>
+        <img class="ui avatar image" src="<%= User.find(listing.user_id).avatar %>"><%= User.find(listing.user_id).name %>
       </div>
-
-      <div class="ui-content">
-        <h3 class='clickable-row' data-href='/listings/<%= listing.id %>'><%= listing.name %></h3>
-        <span><%= truncate(listing.description, length: 100) { link_to "(See more)", "#" } %></span>
+      <div class='clickable-row image' data-href='/listings/<%= listing.id %>'>
+        <img src="<%= listing.image %>">
       </div>
-
+      <div class='clickable-row content' data-href='/listings/<%= listing.id %>'>
+        <span class="right floated">
+          <i class="star icon"></i>
+          <%= listing.description %>
+          <p><i class="hourglass start icon"></i><%= listing.length %> minutes</p>
+        </span>
+        <i class="ticket icon"></i>
+        <%= listing.name %>
+        <p><i class="money icon"></i>$<%= listing.price %></p>
+      </div>
+      <div class="extra content">
+        <div class="ui large transparent left icon input">
+          <i class="heart outline icon"></i>
+          <input type="text" placeholder="Add Comment...">
+        </div>
+      </div>
     </div>
+  </div>
 
   <% end %>
 </div>

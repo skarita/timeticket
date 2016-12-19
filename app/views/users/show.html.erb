@@ -1,7 +1,52 @@
+<div class="listings-category-wrapper">
+  <div class="categories-wrapper">
+        <button class="new-listing btn btn-default btn-back-listings">
+          <a href="/listings/new">
+            <h3>+ Create new listing</h3>
+          </a>
+        </button>
 
-<div class="container users-show-wrapper">
-<h2>My Account</h2>
+<h2><a href="/categories/education"><i class="book icon"></i>Education</a>
+<a href="/categories/recreation"><i class="music icon"></i>Recreation</a>
+<a href="/categories/miscellaneous"><i class="map icon"></i>Miscellaneous</a></h2>
 
+<h2>All Listings</h2>
+<% @listings.each do |listing| %>
+<div class="ui-wrapper">
+  <div class="ui card ui-cards">
+    <div class="content">
+      <div class="right floated meta"><i class="compass icon"></i><%= listing.location %> </div>
+      <img class="ui avatar image" src="<%= User.find(listing.user_id).avatar %>"><%= User.find(listing.user_id).name %>
+    </div>
+    <div class='clickable-row image' data-href='/listings/<%= listing.id %>'>
+      <img src="<%= listing.image %>">
+    </div>
+    <div class='clickable-row content' data-href='/listings/<%= listing.id %>'>
+      <span class="right floated">
+        <i class="star icon"></i>
+        <%= listing.description %>
+        <p><i class="hourglass start icon"></i><%= listing.length %> minutes</p>
+      </span>
+      <i class="ticket icon"></i>
+      <%= listing.name %>
+      <p><i class="money icon"></i>$<%= listing.price %></p>
+    </div>
+    <div class="extra content">
+      <div class="ui large transparent left icon input">
+        <i class="heart outline icon"></i>
+        <input type="text" placeholder="Add Comment...">
+      </div>
+      <div class="btn-edit">
+      <button>
+        <a href="/listings/<%= listing.id %>/edit">
+        <h3>Edit</h3>
+      </button>
+    </div>
+    </div>
+  </div>
 </div>
 
-<%= javascript_include_tag "users/show" %>
+<% end %>
+
+</div>
+</div>

@@ -1,6 +1,6 @@
 <div class="listing-new-wrapper">
   <div class="back-btn">
-    <a href="/users/<%= current_user.id %>"><button class="btn-back">Back To Your Profile</button></a>
+    <a href="/listings"><button class="btn-back">Back</button></a>
   </div>
 
   <div class="listing-new-form">
@@ -42,12 +42,12 @@
       </div>
 
       <div class="listing-image form-group">
-        <textarea id="listing-image" type="text" name="image" rows="8" cols="60" placeholder="Listing Code"> <%= @listing.image %></textarea>
+        <input id="listing-image" class="" name="image" type="text" placeholder="Image Url" value="<%= @listing.image %>">
         <p class="danger"><%= @errors[:image] %></p>
       </div>
 
       <div class="listing-btn">
-        <button class="btn-listing">Submit</button>
+        <button class="btn-listing">Create</button>
       </div>
     <% end %>
   </div>

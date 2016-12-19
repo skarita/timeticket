@@ -1,0 +1,117 @@
+$header-font: 'Share tech mono', sans-serif;
+$font-stack: 'Nunito', sans-serif;
+$primary-color: #373a3c;
+$secondary-color: #5bc0de;
+
+.listing-new-wrapper {
+  width: 100%;
+  font-family: Menlo;
+
+  .listing-new-form {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .listing-new-form input {
+    display: block;
+    padding: 18px;
+    border: none;
+    width: 100%;
+    margin: 6px 0px;
+    border-bottom: 2px solid $secondary-color;
+  }
+
+  .listing-category {
+    margin: 4px 0px;
+  }
+
+  .listing-description textarea {
+    display: block;
+    padding: 18px;
+    border: none;
+    width: 100%;
+    margin: 6px 0px;
+    border-bottom: 2px solid $secondary-color;
+  }
+
+  .listing-body textarea {
+    display: block;
+    padding: 20px;
+    width: 100%;
+    margin: 10px 0px;
+    border: 2px solid $secondary-color;
+  }
+
+  .form-control {
+    margin: 20px 0px;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    height:30px;
+    width: 150px;
+    padding: 2px 10px 2px 20px;
+    outline: none;
+    // color: #74646e;
+    // border: 1px solid #C8BFC4;
+    border-radius: 0px;
+    // box-shadow: inset 1px 1px 2px #ddd8dc;
+    background: #fff;
+    border: none;
+    border-bottom: 2px solid $secondary-color;
+  }
+  .listing-category .fancyArrow {
+    width: 23px;
+    height: 28px;
+    position: absolute;
+    display: inline-block;
+    right: 3px;
+    background: url("http://www.retype.pw/assets/css/blue-jelly-icons/003090-blue-jelly-icon-media-media2-arrow-down.png") right / 90%  no-repeat #fff;
+    pointer-events: none;
+
+  }
+  .listing-category {
+    position: relative;
+    display: inline-block;
+  }
+
+  .btn-listing {
+    margin: 1em 0 0 0;
+    display: block;
+    border: $primary-color;
+    border-radius: 2px;
+    color: #fff;
+    background-color: $secondary-color;
+    padding: 18px;
+    width: 200px;
+    font-size: 1.4em;
+    font-family: $font-stack;
+  }
+
+  .btn-listing:hover {
+    background-color: #31b0d5;
+    color: #fff;
+    border: 2px solid #2aabd2;
+  }
+}
+
+.btn-back {
+  margin: 1em 0 0 2em;
+  display: block;
+  border: $primary-color;
+  border-radius: 2px;
+  color: #fff;
+  background-color: $secondary-color;
+  padding: 18px;
+  width: 200px;
+  font-size: 1.2em;
+  font-family: $font-stack;
+}
+
+.btn-back:hover {
+  background-color: #31b0d5;
+  color: #fff;
+  border: 2px solid #2aabd2;
+}
